@@ -1,19 +1,16 @@
 import './App.css'
-
-let todos = [
-  {id: 1, title: "Review resources"},
-  {id: 2, title: "Take notes"},
-  {id: 3, title: "Code out app"}
-]
+import './TodoList.jsx'
+import './TodoForm.jsx'
+import TodoList from './TodoList.jsx'
+import TodoForm from './TodoForm.jsx'
 
 function App() {
 
   return (
     <div>
       <h1>My Todos</h1>
-      <ul>
-        {todos.map(todo => <li key={todo.id}>{todo.title}</li>)}
-      </ul>
+      <TodoForm></TodoForm>
+      <TodoList></TodoList>
     </div>
   )
 }
